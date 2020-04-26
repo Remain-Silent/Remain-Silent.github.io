@@ -1,82 +1,200 @@
-/* Body */
-
 body {
     color: black;
-    font-family: 'Nunito', sans-serif;
+    background-color: #FFF;
+    font-family: 'Nunito', 'sans-serif', 'M PLUS Rounded 1c';
     line-height: 1.2;
-}
-
-body h1 {
+    font-size: 18px;
     font-weight: lighter;
-}
 
-body p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-/* Body Header */
-header {
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    margin: 0px auto;
-    padding: 10px 0px;
-}
-
-header div ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-header div ul li {
-    font-size: 14px;
-    line-height: 180%;
-    margin: 0px 5%;
-    letter-spacing: normal;
-}
-
-/* Body Body */
-
-body .img_wrap {
-    border: 1px solid #ddd;
-    width: 300px;
-    height: 300px;
+    width: auto;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+div {
+    display: block;
+}
+
+
+
+/* header */
+#header {
+    top: 0;
+    margin-bottom: 1em;
+    left: 0;
+
+    z-index: 10000;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+
+    position: fixed;
+
+    margin-bottom: 10px;
     overflow: hidden;
 }
 
-body .img_wrap img {
+#header h1 {
+    font-size: 300%;
+    font-weight: lighter;
+}
+
+@media (max-width: 909px) {
+
+    #header h1{
+        margin:auto;
+        text-align: center;
+    }
+
+    #nav {
+        margin: auto;
+        width: 550px;
+        height: 50px;
+
+        display: flex;
+    }
+    
+
+    #main{
+        padding: 120px 20px 20px 20px;
+    }
+
+
+}
+
+@media (min-width: 910px) {
+
+    #header h1{
+        float: left;
+        margin-left: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+
+    #nav {
+        width: 550px;
+        margin-left: auto;
+        padding-top: 30px;
+
+        display: flex;
+        justify-content: right;
+    }
+
+    #main{
+        padding: 80px 20px 20px 20px;
+    }
+}
+
+
+#nav ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin: auto;
+}
+
+#nav li {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: underline;
+}
+
+
+
+/* main */
+
+#main {
+    max-width: 1250px;
+
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.u_box {
+    vertical-align: baseline;
+
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    display: flex;
+
+    height: auto;
+    clear: left;
+
+}
+
+.u_box .pic {
+    float: left;
+    margin-right: 40px;
+    margin-top: 20px;
+    max-height: 300px;
+}
+
+.u_box .pic img {
+    object-fit: contain;
+}
+
+.u_box .inner {}
+
+.u_box .inner .name {
+    font-size: 200%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.u_box .inner .tag {
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.tag ::before,
+.tag::after {
+    content: "";
+    height: 1px;
+    background: #444;
+    display: block;
+}
+
+.tag ::before {
+    margin-right: 4px;
+}
+
+.u_box .inner .prof {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.u_box .inner .link {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.u_box .inner .link ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.u_box .inner .link li {
+    float: left;
+    padding-left: 0px;
+    margin-right: 10px;
+}
+
+/* footer */
+#footer {
+    background-color: #F0F0F0;
+    height: 30px;
+    margin-bottom: 0;
+    padding-top: 5px;
     width: 100%;
-    filter: grayscale(0);
-    cursor: pointer;
-    transition-duration: 0.5s;
 }
 
-body .img_wrap img:hover {
-    filter: grayscale(100%);
-    transform: translateY(-2px);
-    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-    opacity: 0.7;
-}
-
-/* Body Footer */
-
-body footer {
-    color: #9a9a9a;
-    background-color: #f6f6f6;
-    margin: 10 auto;
-    padding: 10px 0;
-    line-height: inherit;
-}
-
-body footer p {
-    margin: 0 auto;
-    font-size: 10pt;
+#footer ul {
+    list-style-type: none;
     text-align: center;
+    margin: 0px;
 }
